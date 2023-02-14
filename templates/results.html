@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Clustered News Articles</title>
+  </head>
+  <body>
+    {% for label, articles in clusters.items() %}
+      <h2>Cluster {{ label }}</h2>
+      <ul>
+        {% for article in articles %}
+          <li>Article {{ article[0] }}: {{ article[1] }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </body>
+</html>
